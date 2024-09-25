@@ -1,0 +1,10 @@
+:root {
+  --primary-red: #ff385c;
+  --hover-primary-red: #df2a4b;
+  --border-gray: #dddddd;
+  --sub-text: #6a6a6a;
+  --hover-text: #222222;
+
+  --16-font: 16px;
+  --14-font: 14px;
+}
