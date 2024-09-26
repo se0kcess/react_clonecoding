@@ -1,0 +1,55 @@
+.wrapper {
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+
+.searchBox {
+  border: 1px solid rgba(0, 0, 0, 0.164);
+  width: 848px;
+  height: 64px;
+  border-radius: 100px;
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.searchBox.active {
+  background-color: rgba(0, 0, 0, 0.075);
+  box-shadow: none;
+}
+
+.searchBoxUl {
+  height: 100%;
+  display: flex;
+}
+
+.searchButton {
+  width: 48px;
+  height: 48px;
+  background-color: rgb(255, 68, 99);
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(0, -50%);
+  border: none;
+  border-radius: 100px;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchButton.active {
+  width: 90px;
+  background: linear-gradient(to right, rgb(255, 68, 99), rgb(212, 14, 97));
+}
+
+.searchButton:hover {
+  background: linear-gradient(to right, rgb(255, 68, 99), rgb(212, 14, 97));
+  cursor: pointer;
+}
+
+.searchButtonSpan {
+  width: 16px;
+}

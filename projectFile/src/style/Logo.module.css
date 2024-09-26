@@ -1,0 +1,9 @@
+.wrapper {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.headerLogo {
+  width: 120px;
+}

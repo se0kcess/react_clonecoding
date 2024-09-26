@@ -1,0 +1,81 @@
+.wrapper {
+  width: 56%;
+  position: absolute;
+  top: 76px;
+  left: 0;
+  background-color: white;
+  border-radius: 32px;
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+  display: none;
+  padding: 40px 32px;
+}
+
+.wrapper.active {
+  display: block;
+}
+
+.wrapper.active:hover {
+  cursor: default;
+}
+
+.wrapper > section > h2 {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.listOne {
+  display: flex;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.listOne > li {
+  width: calc(100% / 4);
+  height: 130px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.listOne > li:hover {
+  background-color: rgb(224, 224, 224);
+  cursor: pointer;
+}
+
+.listOne > li > div {
+  width: 100%;
+  height: 80px;
+  border: 1px solid rgba(0, 0, 0, 0.171);
+  border-radius: 10px;
+}
+
+.listOne > li > p {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  padding-left: 2px;
+}
+
+.wrapper > section:nth-of-type(2) {
+  margin-top: 30px;
+}
+
+.listTwo {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.listTwoItem {
+  width: 90px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.178);
+  border-radius: 40px;
+  text-align: center;
+  line-height: 38px;
+  font-size: 0.9rem;
+}
+
+.listTwoItem:hover {
+  border: 1px solid rgba(0, 0, 0, 0.541);
+  cursor: pointer;
+}
