@@ -1,0 +1,59 @@
+.wrapper {
+  width: 50%;
+  position: absolute;
+  top: 76px;
+  right: 0;
+  background-color: white;
+  border-radius: 32px;
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+  display: none;
+  padding: 40px 40px 0 40px;
+}
+
+.wrapper.active {
+  display: block;
+}
+
+.wrapper.active:hover {
+  cursor: default;
+}
+
+.adjust {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.adjust.invisible {
+  display: none;
+}
+
+.adjust p:nth-of-type(1) {
+  font-weight: 500;
+}
+
+.adjust p:nth-of-type(2) {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.63);
+  margin-top: 10px;
+}
+
+.adjust button {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.288);
+  opacity: 0.5;
+}
+
+.adjust button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.adjust span {
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+}

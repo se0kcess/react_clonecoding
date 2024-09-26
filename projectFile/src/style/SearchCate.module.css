@@ -1,0 +1,35 @@
+.headerCateWrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  height: 80px;
+  align-items: center;
+}
+
+.headerCateItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 45px;
+  border-radius: 100px;
+  color: rgba(0, 0, 0, 0.637);
+  font-weight: 500;
+}
+
+.headerCateItem:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+  color: rgba(0, 0, 0, 0.664);
+  cursor: pointer;
+}
+
+.headerCateItem.active {
+  font-weight: 600;
+  color: black;
+}
+
+.headerCateItem.active:hover {
+  background-color: white;
+}
