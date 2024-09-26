@@ -1,10 +1,14 @@
+import { useState } from "react";
 import style from "../_styles/searchCon.module.css"
+import DestinationSearchMenu from "./DestinationSearchMenu";
 
 export default function DormitorySearchCon() {
+  const [openSearchDestination, setOpenSearchDestination] = useState(false);
+
   return (
     <>
       <div className={style.searchCon}>
-        <div className={style.searchSection1}>
+        <div className={style.searchSection1} onClick={() => setOpenSearchDestination(!openSearchDestination)}>
           <p className={style.searchNavTitle}>여행지</p>
           <input
             type="text"
@@ -29,6 +33,9 @@ export default function DormitorySearchCon() {
           <i className="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
+      {openSearchDestination && (
+        <DestinationSearchMenu />
+      )}
     </>
   );
 }

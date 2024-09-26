@@ -1,0 +1,74 @@
+.DestinationSearchMenu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  top: 150px;
+  left: 430px;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  background-color: white;
+}
+
+.searchToRegion,
+.koreaRegion,
+.allCountriesRegion {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.searchToRegion h2,
+.koreaRegion h2,
+.regionCard p {
+  font-size: var(--14-font);
+  color: var(--hover-text);
+  padding-left: 8px;
+}
+
+.regionCards {
+  display: flex;
+  padding: 1rem;
+}
+.regionCard {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+.regionCard:hover {
+  background-color: var(--border-gray);
+}
+.regionCard > div {
+  width: 80px;
+  height: 80px;
+  border: 0.5px solid var(--border-gray);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.regionCard img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.koreaRegionCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: auto;
+  padding: 1rem;
+}
+.koreaRegionCard button {
+  border: 0.5px solid var(--border-gray);
+  background-color: white;
+  padding: 0.5rem 1.7rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.koreaRegionCard button:hover {
+  border: 0.5px solid var(--hover-text);
+}

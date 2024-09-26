@@ -3,6 +3,7 @@ import style from "../_styles/navCon.module.css"
 import { useState } from "react";
 import UserSettingMenu from "./UserSettingMenu";
 import GlobalSettingMenu from "./GlobalSettingMenu";
+import logo from "../../../assets/images/logo.png"
 
 interface NavConProps {
   setSelectCategory: (category: string) => void;
@@ -28,7 +29,7 @@ export default function NavCon({ setSelectCategory }: NavConProps) {
   return (
     <>
       <div className={style.navCon}>
-        <h1 className={style.logo}><img src="/assets/images/logo.png" alt="" /></h1>
+        <h1 className={style.logo}><img src={logo} alt="" /></h1>
         <div className={style.categoryCon}>
           <p onClick={() => setSelectCategory('숙소')}>숙소</p>
           <p onClick={() => setSelectCategory('체험')}>체험</p>
