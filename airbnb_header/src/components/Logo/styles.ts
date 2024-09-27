@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
-export const StyledLogo = styled.div`
+export const LogoWrapper = styled.div`
   color: #ff385c;
-  font-size: 2rem;
   font-weight: bold;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+`;
+
+export const LogoText = styled.span`
+  margin-left: 0.5rem;
 `;

@@ -1,5 +1,9 @@
 import * as S from './styles';
 
-const Logo = () => <S.StyledLogo>airbnb</S.StyledLogo>;
+const Logo = () => (
+  <S.LogoWrapper>
+    <S.LogoText>airbnb</S.LogoText>
+  </S.LogoWrapper>
+);
 
 export default Logo;

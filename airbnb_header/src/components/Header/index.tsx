@@ -1,16 +1,28 @@
-import * as S from './styles';
 import Logo from '../Logo';
-import Navigation from '../Navigation';
 import SearchBar from '../SearchBar';
-import UserMenu from '../UserMenu';
+import Navigation from '../Navigation';
+import * as S from './styles';
+import { NavOptions } from '../NavOptions';
 
-const Header = () => (
-  <S.StyledHeader>
-    <Logo />
-    <Navigation />
-    <SearchBar />
-    <UserMenu />
-  </S.StyledHeader>
-);
+interface HeaderProps {
+  // Add any necessary props here
+}
 
-export default Header;
+export default function Header() {
+  return (
+    <>
+      <S.HeaderContainer>
+        <S.LeftSection>
+          <Logo />
+        </S.LeftSection>
+        <S.CenterSection>
+          <NavOptions />
+        </S.CenterSection>
+        <S.RightSection>
+          <Navigation />
+        </S.RightSection>
+      </S.HeaderContainer>
+      <SearchBar />
+    </>
+  );
+}
