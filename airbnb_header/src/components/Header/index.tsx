@@ -4,10 +4,6 @@ import Navigation from '../Navigation';
 import * as S from './styles';
 import { NavOptions } from '../NavOptions';
 
-interface HeaderProps {
-  // Add any necessary props here
-}
-
 export default function Header() {
   return (
     <>

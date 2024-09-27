@@ -4,7 +4,7 @@ export const SearchContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 1rem 0;
+  border-bottom: 1px solid #e8e8e8;
 `;
 
 export const SearchBarWrapper = styled.div`
@@ -12,8 +12,8 @@ export const SearchBarWrapper = styled.div`
   align-items: center;
   border: 1px solid #dddddd;
   border-radius: 50px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
-  padding: 0.2rem 1rem;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
 `;
 
 export const SearchSection = styled.div`
