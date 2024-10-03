@@ -1,8 +1,7 @@
 import Logo from '../Logo';
-import SearchBar from '../SearchBar';
 import Navigation from '../Navigation';
 import * as S from './styles';
-import { NavOptions } from '../NavOptions';
+import SearchSection from '../SearchSection';
 
 export default function Header() {
   return (
@@ -12,13 +11,12 @@ export default function Header() {
           <Logo />
         </S.LeftSection>
         <S.CenterSection>
-          <NavOptions />
+          <SearchSection />
         </S.CenterSection>
         <S.RightSection>
           <Navigation />
         </S.RightSection>
       </S.HeaderContainer>
-      <SearchBar />
     </>
   );
 }

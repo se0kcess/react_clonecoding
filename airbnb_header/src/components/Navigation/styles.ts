@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 
 export const NavContainer = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
+  bottom: 40px;
 `;
 
 export const NavItem = styled.a`
   padding: 1.2rem 1rem;
+  margin-right: 10px;
   border-radius: 24px;
   text-decoration: none;
   color: #222222;

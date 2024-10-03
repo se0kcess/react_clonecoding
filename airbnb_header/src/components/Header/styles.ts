@@ -6,6 +6,7 @@ export const HeaderContainer = styled.header`
   align-items: center;
   padding: 1.5rem 6rem;
   background-color: #ffffff;
+  border-bottom: 1px solid #d8d8d8;
 `;
 
 export const LeftSection = styled.div`

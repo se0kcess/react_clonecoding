@@ -1,56 +1,51 @@
 import styled from 'styled-components';
 
-export const SearchContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  border-bottom: 1px solid #e8e8e8;
-`;
-
-export const SearchBarWrapper = styled.div`
+export const SearchWrapper = styled.div`
   display: flex;
   align-items: center;
+  width: 1050px;
+  height: 50px;
+  background-color: #ffffff;
   border: 1px solid #dddddd;
-  border-radius: 50px;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
-  margin-bottom: 2rem;
+  margin: 20px 30px 10px 0px;
+  border-radius: 60px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 20px 24px;
+`;
+
+export const SearchBarContainer = styled.div`
+  display: flex;
+  flex-grow: 1;
 `;
 
 export const SearchSection = styled.div`
+  padding: 0 16px;
   flex: 1;
-  padding: 20px 32px;
-  cursor: pointer;
-  position: relative;
+  border-right: 1px solid #dddddd;
 
-  &:hover {
-    background-color: #ebebeb;
-    border-radius: 32px;
+  &:last-child {
+    border-right: none;
   }
+`;
 
-  &:not(:nth-child(n + 4))::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 24px;
-    width: 1px;
-    background-color: #dddddd;
-  }
+export const HalfSearchSection = styled(SearchSection)`
+  flex: 0.5;
 `;
 
 export const SearchLabel = styled.div`
   font-size: 16px;
-  line-height: 16px;
-  padding-bottom: 4px;
+  font-weight: 600;
+  color: #222222;
 `;
 
 export const SearchInput = styled.input`
   border: none;
   outline: none;
-  background: transparent;
   font-size: 18px;
+  color: #222222;
+  margin-top: 5px;
   width: 100%;
+  background: transparent;
 `;
 
 export const SearchButton = styled.button`
@@ -58,15 +53,14 @@ export const SearchButton = styled.button`
   color: white;
   border: none;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin-right: 8px;
 
   &:hover {
-    background-color: #d70466;
+    background-color: #e61e4d;
   }
 `;

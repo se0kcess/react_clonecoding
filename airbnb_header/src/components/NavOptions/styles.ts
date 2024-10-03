@@ -4,17 +4,18 @@ export const NavOptionsContainer = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 `;
 
 export const NavOption = styled.a<{ isActive?: boolean }>`
-  padding: 1.2rem;
+  padding: 10px 24px;
+  margin-top: 20px;
   text-decoration: none;
-  color: ${(props) => (props.isActive ? '#222222' : '#6a6a6a')};
-  font-weight: 400;
-  font-size: 1.3rem;
+  color: ${(props) => (props.isActive ? '#222222' : '#717171')};
+  font-weight: ${(props) => (props.isActive ? '600' : '400')};
+  font-size: 20px;
 
   &:hover {
-    background-color: #f7f7f7;
-    border-radius: 2rem;
+    color: #222222;
   }
 `;
