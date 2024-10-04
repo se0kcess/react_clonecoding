@@ -1,0 +1,89 @@
+.navCon {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navCon .logo {
+  width: 130px;
+  cursor: pointer;
+}
+.logo img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.navCon .categoryCon {
+  display: flex;
+  gap: 2rem;
+}
+
+.categoryCon p {
+  cursor: pointer;
+  font-size: var(--16-font);
+  color: var(--sub-text);
+  transform: translateX(90px);
+}
+.categoryCon p:hover {
+  color: var(--hover-text);
+}
+
+.navCon .etcHeaderNavCon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.etcHeaderNavCon > a {
+  font-size: var(--14-font);
+  color: var(--hover-text);
+  cursor: pointer;
+}
+.etcHeaderNavCon button {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem 0.7rem;
+  border: 0.5px solid var(--border-gray);
+  border-radius: 2rem;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.etcHeaderNavCon button:hover {
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* 아래에서 위로 올라오는 애니메이션 */
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 위에서 아래로 내려가는 애니메이션 */
+@keyframes slideOutDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+/* 메뉴가 열릴 때 애니메이션 */
+.slideIn {
+  animation: slideInUp 0.4s ease forwards;
+}
+
+/* 메뉴가 닫힐 때 애니메이션 */
+.slideOut {
+  animation: slideOutDown 0.4s ease forwards;
+}
