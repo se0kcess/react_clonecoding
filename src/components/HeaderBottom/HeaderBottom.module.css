@@ -55,7 +55,7 @@
   overflow-y: auto;
 }
 .modal1 label {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: inline-block;
   margin: 2rem 0 1rem;
 }

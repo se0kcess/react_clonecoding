@@ -37,8 +37,8 @@
 }
 
 /* .endNavWrap > * {
-  border: 1px solid yellowgreen;
-} */
+    border: 1px solid yellowgreen;
+  } */
 
 .endNavWrap {
   margin-right: 2rem;
@@ -75,7 +75,7 @@
 .headerTop .Btn:hover {
   background-color: rgba(0, 0, 0, 0.04);
   /* padding: 0.5rem;
-  border-radius: 1rem; */
+    border-radius: 1rem; */
 }
 
 .profile.Btn:hover {
