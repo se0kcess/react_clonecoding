@@ -1,4 +1,4 @@
-import style from "../_styles/currencySettingMenu.module.css"
+import style from '../../_styles/currencySettingMenu.module.css';
 
 export default function CurrencySettingMenu() {
   return (
@@ -38,4 +38,4 @@ export default function CurrencySettingMenu() {
       </div>
     </>
   );
-};
+}

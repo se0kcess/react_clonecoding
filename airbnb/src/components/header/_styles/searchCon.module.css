@@ -7,7 +7,11 @@
   box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
-.searchCon > * {
+.searchCon .searchSection1,
+.searchCon .searchSection2,
+.searchCon .searchSection3,
+.searchCon .searchSection4,
+.searchCon .searchBtn {
   padding: 0.7rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -16,7 +20,10 @@
   width: 100%;
   cursor: pointer;
 }
-.searchCon > *:hover {
+.searchCon .searchSection1:hover,
+.searchCon .searchSection2:hover,
+.searchCon .searchSection3:hover,
+.searchCon .searchSection4:hover {
   background-color: var(--border-gray);
   border-radius: 2rem;
   border: none;

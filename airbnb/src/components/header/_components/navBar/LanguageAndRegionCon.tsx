@@ -1,4 +1,4 @@
-import style from "../_styles/languageAndRegionCon.module.css"
+import style from "../../_styles/languageAndRegionCon.module.css"
 import Switch from '@mui/material/Switch';
 
 const label = { inputProps: { 'aria-label': 'Color switch demo' } };
