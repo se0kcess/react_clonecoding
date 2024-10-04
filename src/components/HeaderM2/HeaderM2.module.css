@@ -1,0 +1,53 @@
+/* modal2 */
+.modal2 {
+  box-shadow: 0 0 5px rgba(var(--color-rgb-foggy), 0.3);
+  border-radius: 2.5rem;
+  width: 80%;
+  height: 30rem;
+  padding: 1rem 2rem;
+
+  position: absolute;
+  transform: translate(0, 5rem);
+  font-size: 0.8rem;
+
+  overflow: auto;
+
+  z-index: 100;
+}
+
+.selectBar {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+
+  margin: 1rem;
+}
+.selectBar .wrapper {
+  background-color: rgba(var(--color-rgb-foggy), 0.2);
+  /* border: 1px solid black; */
+  border-radius: 2rem;
+  width: 40%;
+
+  padding: 0 0.2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.selectBar .wrapper .Btn {
+  /* border: 1px solid black; */
+  /* line-height: 2rem; */
+  border-radius: 2rem;
+  padding: 0.7rem 1.2rem;
+  margin: 0.3rem;
+
+  cursor: pointer;
+}
+.selectBar .wrapper .Btn.active {
+  background-color: white;
+}
+
+.calenderWrap {
+  display: flex;
+  justify-content: space-between;
+}

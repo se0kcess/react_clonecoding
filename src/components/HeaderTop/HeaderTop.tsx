@@ -11,11 +11,7 @@ export default function HeaderTop() {
     <>
       <section className={styles.headerTop}>
         <h1 className={styles.logo}>
-          <img
-            src="/airbnb-svgrepo-com.svg"
-            alt="logo"
-            style={{ width: "1.8rem" }}
-          />
+          <img src="/airbnb-svgrepo-com.svg" alt="logo" />
         </h1>
         <nav className={styles.midNavWrap}>
           <i className={`${styles.Btn} ${styles.active}`}>숙소</i>

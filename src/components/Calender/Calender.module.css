@@ -1,0 +1,44 @@
+.calender {
+  /* border: 1px solid black; */
+  width: 47%;
+}
+
+.calender p {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+}
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.days * {
+  border: 2px solid transparent;
+  text-align: center;
+  padding: 1.1rem 0;
+
+  width: 3rem;
+  height: 3rem;
+
+  cursor: pointer;
+}
+
+.days .dayNames {
+  color: rgba(var(--color-rgb-hof), 0.7);
+  cursor: default;
+}
+
+.days .disabled {
+  color: rgba(var(--color-rgb-foggy), 0.3);
+  /* color: red; */
+}
+.days .able:hover {
+  border: 2px solid var(--color-foggy);
+  border-radius: 2rem;
+}
+.days .able:active {
+  background-color: var(--color-hof);
+  color: white;
+}
