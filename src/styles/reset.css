@@ -1,0 +1,153 @@
+* {
+  --color-rausch: #ff5a5f;
+  --color-babu: #00a699;
+  --color-arches: #fc642d;
+  --color-hof: #484848;
+  --color-foggy: #767676;
+
+  --color-rgb-rausch: 255, 90, 95;
+  --color-rgb-babu: 0, 166, 153;
+  --color-rgb-arches: 252, 100, 45;
+  --color-rgb-hof: 72, 72, 72;
+  --color-rgb-foggy: 118, 118, 118;
+  /* https://usbrandcolors.com/airbnb-colors/ */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-style: normal;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+input {
+  border: none !important; /* 강제적으로 적용 */
+  box-shadow: none !important; /* 그림자 제거 */
+  -webkit-appearance: none; /* 브라우저 기본 스타일 제거 */
+  -moz-appearance: none;
+  appearance: none;
+  outline: none; /* 포커스 시 외곽선 제거 */
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/*  */
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

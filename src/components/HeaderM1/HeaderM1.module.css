@@ -1,0 +1,70 @@
+/* modal1 */
+.modal1 {
+  box-shadow: 0 0 5px rgba(var(--color-rgb-foggy), 0.3);
+  border-radius: 1rem;
+  width: 30rem;
+  /* height: 60vh; */
+  padding: 1rem 2rem;
+
+  position: absolute;
+  transform: translate(1rem, 5rem);
+  font-size: 0.8rem;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  z-index: 100;
+}
+.modal1 label {
+  /* border: 1px solid black; */
+  display: inline-block;
+  margin: 2rem 0 1rem;
+}
+
+.modal1 #selectMap {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-items: space-between;
+}
+.modal1 #selectMap div {
+  border-radius: 1rem;
+  padding: 8px;
+
+  display: flex;
+  flex-direction: column;
+}
+.modal1 #selectMap div:hover {
+  background-color: rgba(var(--color-rgb-foggy), 0.2);
+  cursor: pointer;
+}
+.modal1 #selectMap img {
+  border: 0.1px solid rgba(var(--color-rgb-foggy), 0.3);
+  border-radius: 0.5rem;
+  margin-bottom: 5px;
+
+  object-fit: contain;
+  width: 5rem;
+  height: 5rem;
+}
+.modal1 #selectMap i {
+  /* font-size: 0.8rem; */
+  color: var(--color-foggy);
+}
+
+.modal1 #selectKor {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.modal1 #selectKor button {
+  border: 0.1px solid rgba(var(--color-rgb-foggy), 0.3);
+  border-radius: 2rem;
+  height: 2.5rem;
+  width: 90%;
+  padding: 5px 0;
+  margin: 5px 0;
+
+  cursor: pointer;
+}
+.modal1 #selectKor button:hover {
+  border-color: rgba(var(--color-rgb-hog), 0.2);
+}

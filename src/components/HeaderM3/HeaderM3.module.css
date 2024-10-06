@@ -1,0 +1,67 @@
+/* modal3 */
+.modal3 {
+  box-shadow: 0 0 5px rgba(var(--color-rgb-foggy), 0.3);
+  border-radius: 2rem;
+  width: 25rem;
+  /* height: 60vh; */
+  padding: 1rem 2rem;
+
+  position: absolute;
+  transform: translate(29rem, 5rem);
+  font-size: 0.8rem;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  z-index: 100;
+}
+
+.modal3 * {
+  /* border: 1px solid /sblack; */
+}
+
+.modal3 > div,
+.modal3 .counterWrap {
+  margin: 1.2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal3 .tagWrap {
+  height: fit-content;
+}
+.modal3 .tagWrap p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.modal3 .tagWrap i {
+  color: rgba(var(--color-rgb-foggy), 0.7);
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.counterWrap p {
+  font-size: 1rem;
+}
+.minusBtn,
+.plusBtn {
+  border: 1.5px solid rgba(var(--color-rgb-foggy), 0.7);
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  padding: 10px;
+  margin: 10px;
+  color: rgba(var(--color-rgb-foggy), 0.9);
+
+  cursor: pointer;
+}
+
+.minusBtn:hover,
+.plusBtn:hover {
+  border: 1px solid var(--color-hof);
+}
+
+.minusBtn.disabled {
+  border-color: rgba(var(--color-rgb-foggy), 0.2);
+  color: rgba(var(--color-rgb-foggy), 0.5);
+}

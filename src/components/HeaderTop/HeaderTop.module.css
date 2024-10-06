@@ -1,0 +1,85 @@
+.headerTop {
+  /* border: 1px solid red; */
+  width: 100vw;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerTop * {
+  /* border: 1px solid black; */
+}
+
+.logo {
+  margin: 1rem 2rem;
+  cursor: pointer;
+}
+.logo img {
+  width: 2.5rem;
+  object-fit: contain;
+}
+
+.headerTop .Btn {
+  color: var(--color-foggy);
+  font-size: 1rem;
+  cursor: pointer;
+
+  padding: 0.7rem;
+  border-radius: 2rem;
+
+  transition: 0.2s;
+}
+.headerTop .Btn.active {
+  color: var(--color-hof);
+}
+.headerTop .Btn:hover {
+  background-color: rgba(var(--color-rgb-foggy), 0.1);
+}
+
+.midNavWrap {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.endNavWrap {
+  margin-right: 2rem;
+  width: 22rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.endNavWrap .profile.Btn {
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  padding: 5px 8px;
+  border-radius: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.endNavWrap .profile.Btn:hover {
+  background-color: transparent;
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+
+@media (max-width: 950px) {
+  .midNavWrap {
+    transform: translate(-50%, 180%);
+  }
+  .headerTop {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 740px) {
+  .headerTop {
+    display: none;
+  }
+}

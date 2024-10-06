@@ -1,0 +1,19 @@
+.headerMobile {
+  border: 1px solid black;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+  margin: 0.5rem 3rem;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+}
+
+.headerMobile {
+  display: none;
+}
+
+@media (max-width: 740px) {
+  .headerMobile {
+    display: contents;
+  }
+}
