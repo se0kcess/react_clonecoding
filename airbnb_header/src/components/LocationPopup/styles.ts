@@ -13,20 +13,20 @@ export const PopupContainer = styled.div`
 `;
 
 export const Title = styled.h3`
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 20px;
 `;
 
-export const RegionGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+export const RegionContainer = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
 `;
 
 export const RegionCard = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
   cursor: pointer;
   padding: 8px;
   border-radius: 8px;
@@ -37,13 +37,14 @@ export const RegionCard = styled.div`
 `;
 
 export const RegionImage = styled.img`
-  width: 40px;
-  height: 40px;
+  width: 100px;
+  height: 100px;
   border-radius: 8px;
   margin-right: 16px;
 `;
 
 export const RegionName = styled.span`
+  margin: 10px 0 20px 0;
   font-size: 14px;
 `;
 
@@ -51,10 +52,20 @@ export const CountryList = styled.div`
   margin-top: 20px;
 `;
 
-export const CountryItem = styled.div`
-  padding: 8px;
+export const CityGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+`;
+
+export const CityButton = styled.button`
+  padding: 8px 16px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 30px;
+  font-size: 14px;
   cursor: pointer;
-  border-radius: 8px;
+  transition: background-color 0.3s ease;
 
   &:hover {
     background-color: #f7f7f7;

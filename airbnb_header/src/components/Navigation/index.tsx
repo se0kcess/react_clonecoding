@@ -1,4 +1,4 @@
-import { GlobeIcon, MenuIcon, UserIcon } from '../Icons/Icons';
+import { GlobeIcon, MenuIcon, UserIcon } from '../../assets/Icons/Icons';
 import * as S from './styles';
 
 const Navigation = () => (
