@@ -11,23 +11,58 @@ interface SearchBarProps {
 
 type ActiveButton = 'location' | 'checkIn' | 'checkOut' | 'guests' | null;
 
+interface GuestCounts {
+  adults: number;
+  children: number;
+  infants: number;
+  pets: number;
+}
+
 const SearchBar = ({ activeOption }: SearchBarProps) => {
   const [activeButton, setActiveButton] = useState<ActiveButton>(null);
   const [isLocationPopupOpen, setIsLocationPopupOpen] = useState(false);
   const [isGuestPopupOpen, setIsGuestPopupOpen] = useState(false);
+  const [guestCounts, setGuestCounts] = useState<GuestCounts>({
+    adults: 0,
+    children: 0,
+    infants: 0,
+    pets: 0,
+  });
 
   const togglePopup = (button: ActiveButton) => {
     if (activeButton === button) {
-      // 같은 버튼을 두 번 클릭한 경우
       setActiveButton(null);
       setIsLocationPopupOpen(false);
       setIsGuestPopupOpen(false);
     } else {
-      // 다른 버튼을 클릭한 경우
       setActiveButton(button);
       setIsLocationPopupOpen(button === 'location');
       setIsGuestPopupOpen(button === 'guests');
     }
+  };
+
+  const handleGuestCountChange = (counts: GuestCounts) => {
+    setGuestCounts(counts);
+  };
+
+  const getGuestCountDisplay = () => {
+    const { adults, children, infants, pets } = guestCounts;
+    const totalGuests = adults + children;
+    let display = '';
+
+    if (totalGuests > 0) {
+      display += `게스트 ${totalGuests}명`;
+      if (infants > 0) {
+        display += `, 유아 : ${infants}명`;
+      }
+      if (pets > 0) {
+        display += `, 반려동물 ${pets}마리`;
+      }
+    } else {
+      display = '게스트 추가';
+    }
+
+    return display;
   };
 
   return (
@@ -64,10 +99,17 @@ const SearchBar = ({ activeOption }: SearchBarProps) => {
         <S.Divider />
         <S.SearchSectionButton onClick={() => togglePopup('guests')} isActive={activeButton === 'guests'}>
           <S.SearchLabel>여행자</S.SearchLabel>
-          <S.SearchInput placeholder='게스트 추가' readOnly />
+          <S.SearchInput placeholder={getGuestCountDisplay()} readOnly />
           {isGuestPopupOpen && (
             <S.PopupWrapper>
-              <GuestPopup onClose={() => togglePopup('guests')} />
+              <GuestPopup
+                onClose={(e) => {
+                  e.stopPropagation();
+                  togglePopup('guests');
+                }}
+                onGuestCountChange={handleGuestCountChange}
+                initialCounts={guestCounts}
+              />
             </S.PopupWrapper>
           )}
         </S.SearchSectionButton>

@@ -1,33 +1,54 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import * as S from './styles';
 
-interface GuestPopupProps {
-  onClose: () => void;
+interface GuestCounts {
+  adults: number;
+  children: number;
+  infants: number;
+  pets: number;
 }
 
-export const GuestPopup = ({ onClose }: GuestPopupProps) => {
-  const [adults, setAdults] = useState(0);
-  const [children, setChildren] = useState(0);
-  const [infants, setInfants] = useState(0);
-  const [pets, setPets] = useState(0);
+interface GuestPopupProps {
+  onClose: (e: React.MouseEvent) => void;
+  onGuestCountChange: (counts: GuestCounts) => void;
+  initialCounts: GuestCounts;
+}
 
-  const updateCount = (setter: React.Dispatch<React.SetStateAction<number>>, value: number) => {
-    setter((prev) => Math.max(0, prev + value));
+export const GuestPopup = ({ onClose, onGuestCountChange, initialCounts }: GuestPopupProps) => {
+  const [counts, setCounts] = useState<GuestCounts>(initialCounts);
+
+  const updateCount = (type: keyof GuestCounts, value: number) => {
+    setCounts((prev) => ({
+      ...prev,
+      [type]: Math.max(0, prev[type] + value),
+    }));
+  };
+
+  useEffect(() => {
+    onGuestCountChange(counts);
+  }, [counts, onGuestCountChange]);
+
+  const handleButtonClick = (e: React.MouseEvent, action: () => void) => {
+    e.stopPropagation();
+    action();
   };
 
   return (
-    <S.PopupContainer>
+    <S.PopupContainer onClick={(e) => e.stopPropagation()}>
       <S.GuestType>
         <S.GuestInfo>
           <S.GuestTitle>성인</S.GuestTitle>
           <S.GuestSubtitle>13세 이상</S.GuestSubtitle>
         </S.GuestInfo>
         <S.CounterContainer>
-          <S.CounterButton onClick={() => updateCount(setAdults, -1)} disabled={adults === 0}>
+          <S.CounterButton
+            onClick={(e) => handleButtonClick(e, () => updateCount('adults', -1))}
+            disabled={counts.adults === 0}
+          >
             -
           </S.CounterButton>
-          <S.CounterValue>{adults}</S.CounterValue>
-          <S.CounterButton onClick={() => updateCount(setAdults, 1)}>+</S.CounterButton>
+          <S.CounterValue>{counts.adults}</S.CounterValue>
+          <S.CounterButton onClick={(e) => handleButtonClick(e, () => updateCount('adults', 1))}>+</S.CounterButton>
         </S.CounterContainer>
       </S.GuestType>
       <S.GuestType>
@@ -36,11 +57,14 @@ export const GuestPopup = ({ onClose }: GuestPopupProps) => {
           <S.GuestSubtitle>2~12세</S.GuestSubtitle>
         </S.GuestInfo>
         <S.CounterContainer>
-          <S.CounterButton onClick={() => updateCount(setChildren, -1)} disabled={children === 0}>
+          <S.CounterButton
+            onClick={(e) => handleButtonClick(e, () => updateCount('children', -1))}
+            disabled={counts.children === 0}
+          >
             -
           </S.CounterButton>
-          <S.CounterValue>{children}</S.CounterValue>
-          <S.CounterButton onClick={() => updateCount(setChildren, 1)}>+</S.CounterButton>
+          <S.CounterValue>{counts.children}</S.CounterValue>
+          <S.CounterButton onClick={(e) => handleButtonClick(e, () => updateCount('children', 1))}>+</S.CounterButton>
         </S.CounterContainer>
       </S.GuestType>
       <S.GuestType>
@@ -49,11 +73,14 @@ export const GuestPopup = ({ onClose }: GuestPopupProps) => {
           <S.GuestSubtitle>2세 미만</S.GuestSubtitle>
         </S.GuestInfo>
         <S.CounterContainer>
-          <S.CounterButton onClick={() => updateCount(setInfants, -1)} disabled={infants === 0}>
+          <S.CounterButton
+            onClick={(e) => handleButtonClick(e, () => updateCount('infants', -1))}
+            disabled={counts.infants === 0}
+          >
             -
           </S.CounterButton>
-          <S.CounterValue>{infants}</S.CounterValue>
-          <S.CounterButton onClick={() => updateCount(setInfants, 1)}>+</S.CounterButton>
+          <S.CounterValue>{counts.infants}</S.CounterValue>
+          <S.CounterButton onClick={(e) => handleButtonClick(e, () => updateCount('infants', 1))}>+</S.CounterButton>
         </S.CounterContainer>
       </S.GuestType>
       <S.GuestType>
@@ -62,11 +89,14 @@ export const GuestPopup = ({ onClose }: GuestPopupProps) => {
           <S.GuestSubtitle>보조동물을 동반하시나요?</S.GuestSubtitle>
         </S.GuestInfo>
         <S.CounterContainer>
-          <S.CounterButton onClick={() => updateCount(setPets, -1)} disabled={pets === 0}>
+          <S.CounterButton
+            onClick={(e) => handleButtonClick(e, () => updateCount('pets', -1))}
+            disabled={counts.pets === 0}
+          >
             -
           </S.CounterButton>
-          <S.CounterValue>{pets}</S.CounterValue>
-          <S.CounterButton onClick={() => updateCount(setPets, 1)}>+</S.CounterButton>
+          <S.CounterValue>{counts.pets}</S.CounterValue>
+          <S.CounterButton onClick={(e) => handleButtonClick(e, () => updateCount('pets', 1))}>+</S.CounterButton>
         </S.CounterContainer>
       </S.GuestType>
     </S.PopupContainer>
