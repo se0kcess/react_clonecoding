@@ -26,7 +26,7 @@ export const GuestPopup = ({ onClose, onGuestCountChange, initialCounts }: Guest
 
   useEffect(() => {
     onGuestCountChange(counts);
-  }, [counts, onGuestCountChange]);
+  }, [counts]);
 
   const handleButtonClick = (e: React.MouseEvent, action: () => void) => {
     e.stopPropagation();

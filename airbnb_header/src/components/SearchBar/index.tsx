@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { SearchIcon } from '../../assets/Icons/Icons';
 import { NavOptionType } from '../NavOptions';
 import * as S from './styles';
@@ -41,9 +41,9 @@ const SearchBar = ({ activeOption }: SearchBarProps) => {
     }
   };
 
-  const handleGuestCountChange = (counts: GuestCounts) => {
+  const handleGuestCountChange = useCallback((counts: GuestCounts) => {
     setGuestCounts(counts);
-  };
+  }, []);
 
   const getGuestCountDisplay = () => {
     const { adults, children, infants, pets } = guestCounts;

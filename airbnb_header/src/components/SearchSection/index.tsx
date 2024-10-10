@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavOptions, NavOptionType } from '../NavOptions';
 import SearchBar from '../SearchBar';
 
-const SearchSection: React.FC = () => {
+const SearchSection = () => {
   const [activeOption, setActiveOption] = useState<NavOptionType>('숙소');
 
   const onOptionChange = (option: NavOptionType) => {
