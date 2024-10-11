@@ -7,7 +7,7 @@ interface NavOptionsProps {
   onOptionChange: (option: NavOptionType) => void;
 }
 
-export const NavOptions = ({ onOptionChange }: NavOptionsProps) => {
+const NavOptions = ({ onOptionChange }: NavOptionsProps) => {
   const [activeOption, setActiveOption] = useState('숙소');
 
   const onOptionClick = (option: NavOptionType) => {
@@ -26,3 +26,5 @@ export const NavOptions = ({ onOptionChange }: NavOptionsProps) => {
     </S.NavOptionsContainer>
   );
 };
+
+export default NavOptions;

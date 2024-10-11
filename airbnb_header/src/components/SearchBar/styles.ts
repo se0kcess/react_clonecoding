@@ -3,35 +3,30 @@ import styled from 'styled-components';
 interface SearchBarContainerProps {
   isActive: boolean;
 }
+
 interface SearchSectionButtonProps {
   isActive?: boolean;
 }
 
-export const SearchWrapper = styled.div`
-  position: relative;
+export const SearchBarWrapper = styled.div<SearchBarContainerProps>`
   display: flex;
   align-items: center;
-  width: 1050px;
-  height: 80px;
-  border: 1px solid #dddddd;
-  margin: 20px 30px 10px 0px;
-  border-radius: 60px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
-`;
-
-export const SearchBarContainer = styled.div<SearchBarContainerProps>`
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
-  height: 100%;
   background-color: ${(props) => (props.isActive ? '#f7f7f7' : '#ffffff')};
   border-radius: 60px;
-  transition: background-color 0.3s ease;
+  width: 50%;
+  border: 1px solid #dddddd;
+  margin: 0 auto;
+  border-radius: 60px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 1500px) {
+    width: 70%;
+  }
 `;
 
 export const SearchSectionButton = styled.button<SearchSectionButtonProps>`
   position: relative;
-  padding: 16px 24px;
+  padding: 1rem 2.5rem;
   flex: 1;
   background: ${(props) => (props.isActive ? '#ffffff' : 'none')};
   border: none;
@@ -53,7 +48,7 @@ export const HalfSearchSectionButton = styled(SearchSectionButton)`
 `;
 
 export const SearchLabel = styled.div`
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   color: #222222;
 `;
@@ -61,7 +56,7 @@ export const SearchLabel = styled.div`
 export const SearchInput = styled.input`
   border: none;
   outline: none;
-  font-size: 18px;
+  font-size: 1.2rem;
   color: #222222;
   margin-top: 5px;
   width: 100%;
@@ -73,13 +68,10 @@ export const SearchButton = styled.button`
   background-color: #ff385c;
   color: white;
   border: none;
-  margin-right: 10px;
+  margin-right: 1rem;
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
 
   &:hover {
@@ -89,7 +81,7 @@ export const SearchButton = styled.button`
 
 export const Divider = styled.div`
   width: 1px;
-  height: 32px;
+  height: 2em;
   background-color: #dddddd;
 `;
 

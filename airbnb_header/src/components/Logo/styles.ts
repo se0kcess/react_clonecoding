@@ -1,15 +1,14 @@
 import styled from 'styled-components';
 
 export const LogoWrapper = styled.div`
-  position: relative;
   color: #ff385c;
-  font-weight: bold;
-  font-size: 2rem;
   display: flex;
+  justify-content: center;
   align-items: center;
-  bottom: 40px;
+  font-size: 2rem;
 `;
 
 export const LogoText = styled.span`
-  margin-left: 0.5rem;
+  margin-left: 0.8rem;
+  font-weight: bold;
 `;

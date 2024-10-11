@@ -4,16 +4,15 @@ export const NavOptionsContainer = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  margin-left: 10rem;
 `;
 
 export const NavOption = styled.a<{ isActive?: boolean }>`
-  padding: 10px 24px;
-  margin-top: 20px;
+  margin: 1em;
   text-decoration: none;
   color: ${(props) => (props.isActive ? '#222222' : '#717171')};
   font-weight: ${(props) => (props.isActive ? '600' : '400')};
-  font-size: 20px;
+  font-size: 1.4rem;
 
   &:hover {
     color: #222222;

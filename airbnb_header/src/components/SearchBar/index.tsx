@@ -66,58 +66,56 @@ const SearchBar = ({ activeOption }: SearchBarProps) => {
   };
 
   return (
-    <S.SearchWrapper>
-      <S.SearchBarContainer isActive={activeButton !== null}>
-        <S.SearchSectionButton onClick={() => togglePopup('location')} isActive={activeButton === 'location'}>
-          <S.SearchLabel>여행지</S.SearchLabel>
-          <S.SearchInput placeholder='여행지 검색' readOnly />
-          {isLocationPopupOpen && (
-            <S.PopupWrapper>
-              <LocationPopup onClose={() => togglePopup('location')} />
-            </S.PopupWrapper>
-          )}
-        </S.SearchSectionButton>
-        <S.Divider />
-        {activeOption === '숙소' ? (
-          <>
-            <S.HalfSearchSectionButton onClick={() => togglePopup('checkIn')} isActive={activeButton === 'checkIn'}>
-              <S.SearchLabel>체크인</S.SearchLabel>
-              <S.SearchInput placeholder='날짜 추가' readOnly />
-            </S.HalfSearchSectionButton>
-            <S.Divider />
-            <S.HalfSearchSectionButton onClick={() => togglePopup('checkOut')} isActive={activeButton === 'checkOut'}>
-              <S.SearchLabel>체크아웃</S.SearchLabel>
-              <S.SearchInput placeholder='날짜 추가' readOnly />
-            </S.HalfSearchSectionButton>
-          </>
-        ) : (
-          <S.SearchSectionButton onClick={() => togglePopup('checkIn')} isActive={activeButton === 'checkIn'}>
-            <S.SearchLabel>날짜</S.SearchLabel>
-            <S.SearchInput placeholder='날짜 추가' readOnly />
-          </S.SearchSectionButton>
+    <S.SearchBarWrapper isActive={activeButton !== null}>
+      <S.SearchSectionButton onClick={() => togglePopup('location')} isActive={activeButton === 'location'}>
+        <S.SearchLabel>여행지</S.SearchLabel>
+        <S.SearchInput placeholder='여행지 검색' readOnly />
+        {isLocationPopupOpen && (
+          <S.PopupWrapper>
+            <LocationPopup onClose={() => togglePopup('location')} />
+          </S.PopupWrapper>
         )}
-        <S.Divider />
-        <S.SearchSectionButton onClick={() => togglePopup('guests')} isActive={activeButton === 'guests'}>
-          <S.SearchLabel>여행자</S.SearchLabel>
-          <S.SearchInput placeholder={getGuestCountDisplay()} readOnly />
-          {isGuestPopupOpen && (
-            <S.PopupWrapper>
-              <GuestPopup
-                onClose={(e) => {
-                  e.stopPropagation();
-                  togglePopup('guests');
-                }}
-                onGuestCountChange={handleGuestCountChange}
-                initialCounts={guestCounts}
-              />
-            </S.PopupWrapper>
-          )}
+      </S.SearchSectionButton>
+      <S.Divider />
+      {activeOption === '숙소' ? (
+        <>
+          <S.HalfSearchSectionButton onClick={() => togglePopup('checkIn')} isActive={activeButton === 'checkIn'}>
+            <S.SearchLabel>체크인</S.SearchLabel>
+            <S.SearchInput placeholder='날짜 추가' readOnly />
+          </S.HalfSearchSectionButton>
+          <S.Divider />
+          <S.HalfSearchSectionButton onClick={() => togglePopup('checkOut')} isActive={activeButton === 'checkOut'}>
+            <S.SearchLabel>체크아웃</S.SearchLabel>
+            <S.SearchInput placeholder='날짜 추가' readOnly />
+          </S.HalfSearchSectionButton>
+        </>
+      ) : (
+        <S.SearchSectionButton onClick={() => togglePopup('checkIn')} isActive={activeButton === 'checkIn'}>
+          <S.SearchLabel>날짜</S.SearchLabel>
+          <S.SearchInput placeholder='날짜 추가' readOnly />
         </S.SearchSectionButton>
-      </S.SearchBarContainer>
+      )}
+      <S.Divider />
+      <S.SearchSectionButton onClick={() => togglePopup('guests')} isActive={activeButton === 'guests'}>
+        <S.SearchLabel>여행자</S.SearchLabel>
+        <S.SearchInput placeholder={getGuestCountDisplay()} readOnly />
+        {isGuestPopupOpen && (
+          <S.PopupWrapper>
+            <GuestPopup
+              onClose={(e) => {
+                e.stopPropagation();
+                togglePopup('guests');
+              }}
+              onGuestCountChange={handleGuestCountChange}
+              initialCounts={guestCounts}
+            />
+          </S.PopupWrapper>
+        )}
+      </S.SearchSectionButton>
       <S.SearchButton>
         <SearchIcon />
       </S.SearchButton>
-    </S.SearchWrapper>
+    </S.SearchBarWrapper>
   );
 };
 
